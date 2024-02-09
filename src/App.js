@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import SideBar from './component/SideBar';
 import TopBar from './component/TopBar';
 import Dashboard from './component/Dashboard';
+import Table from './component/Table';
 
 function App() {
   return (
@@ -17,11 +18,10 @@ function App() {
               <div className="container-fluid">
                 <Switch>
                   <Route path="/" exact={true} component={Dashboard} />
+                  <Route path="/table" exact={true} component={Table} />
                 </Switch>
               </div>
-
             </div>
-
           </div>
         </div>
 

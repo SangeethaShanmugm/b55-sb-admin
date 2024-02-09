@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import Card2 from './Card2'
 
 function Dashboard() {
     return (
@@ -11,6 +12,7 @@ function Dashboard() {
             </div>
 
             <Card />
+            <Card2 />
         </div>
     )
 }
