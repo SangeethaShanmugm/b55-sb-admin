@@ -1,43 +1,47 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import { UserContext } from "./UserContext"
 function Table() {
-    const data = [
-        {
-            name: "Tiger Nixon",
-            address: "Edinburgh",
-            salary: "$320,800"
-        },
-        {
-            name: "Garrett Winters",
-            address: "Tokyo",
-            salary: "$320,800"
-        },
-        {
-            name: "Garrett Winters",
-            address: "Tokyo",
-            salary: "$320,800"
-        },
-        {
-            name: "Garrett Winters",
-            address: "Tokyo",
-            salary: "$320,800"
-        },
-        {
-            name: "Garrett Winters",
-            address: "Tokyo",
-            salary: "$320,800"
-        },
-        {
-            name: "Garrett Winters",
-            address: "Tokyo",
-            salary: "$320,800"
-        },
-        {
-            name: "Garrett Winters",
-            address: "Tokyo",
-            salary: "$320,800"
-        }
-    ]
+    // const data = [
+    //     {
+    //         name: "Tiger Nixon",
+    //         address: "Edinburgh",
+    //         salary: "$320,800"
+    //     },
+    //     {
+    //         name: "Garrett Winters",
+    //         address: "Tokyo",
+    //         salary: "$320,800"
+    //     },
+    //     {
+    //         name: "Garrett Winters",
+    //         address: "Tokyo",
+    //         salary: "$320,800"
+    //     },
+    //     {
+    //         name: "Garrett Winters",
+    //         address: "Tokyo",
+    //         salary: "$320,800"
+    //     },
+    //     {
+    //         name: "Garrett Winters",
+    //         address: "Tokyo",
+    //         salary: "$320,800"
+    //     },
+    //     {
+    //         name: "Garrett Winters",
+    //         address: "Tokyo",
+    //         salary: "$320,800"
+    //     },
+    //     {
+    //         name: "Garrett Winters",
+    //         address: "Tokyo",
+    //         salary: "$320,800"
+    //     }
+    // ]
+
+    const data = useContext(UserContext)//subscribe
+    console.log(data)//{userData: Array(0), setUserData: ƒ}
+
     return (
         <div class="container-fluid">
             <h1 class="h3 mb-2 text-gray-800">Tables</h1>
@@ -51,17 +55,17 @@ function Table() {
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Salary</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.map((user, index) => {
+                                {data.userData.map((user, index) => {
                                     return (
                                         <tr key={index}>
                                             <td>{user.name}</td>
-                                            <td>{user.address}</td>
-                                            <td>{user.salary}</td>
+                                            <td>{user.email}</td>
+                                            <td>{user.phone}</td>
                                         </tr>
                                     )
                                 })}

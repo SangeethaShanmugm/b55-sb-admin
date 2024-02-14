@@ -27,10 +27,16 @@ function SideBar() {
                         <span>Dashboard</span>
                     </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link className="nav-link" to="/table">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span>
+                    </Link>
+                </li> */}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/user">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>User</span>
                     </Link>
                 </li>
             </ul>
